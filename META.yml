@@ -1,0 +1,12 @@
+# http://module-build.sourceforge.net/META-spec.html
+#XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
+name:         Data-Message
+version:      1.01
+version_from: lib/Data/Message.pm
+installdirs:  site
+requires:
+    Email::Simple:                 1.92
+    Test::More:                    0.47
+
+distribution_type: module
+generated_by: ExtUtils::MakeMaker version 6.24
