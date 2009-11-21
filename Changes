@@ -1,3 +1,8 @@
+Revision history for Data-Message
+
+1.012     2009-11-20
+          re-upped to force reindexing; nothing has changed
+
 1.011     2007-04-10
           temporarily reduce functionality to make tests pass
 
