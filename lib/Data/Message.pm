@@ -1,10 +1,9 @@
-package Data::Message;
-# $Id: Message.pm,v 1.1 2004/12/23 00:54:14 cwest Exp $
 use strict;
+package Data::Message;
+# ABSTRACT: parse and build header-and-body messages (kinda like email)
 
+use Email::Simple 1.92;
 use base qw[Email::Simple];
-use vars qw[$VERSION];
-$VERSION   = '1.012';
 
 my $private = \q[no peeking];
 
@@ -25,10 +24,6 @@ sub header_set {
 
 __END__
 
-=head1 NAME
-
-Data::Message - Parse and Reconstruct RFC2822 Compliant Messages
-
 =head1 SYNOPSIS
 
   use Data::Message;
@@ -39,6 +34,10 @@ Data::Message - Parse and Reconstruct RFC2822 Compliant Messages
   print $message->body;
 
 =head1 DESCRIPTION
+
+B<ACHTUNG!>  What's the point of this module?  It isn't even clear to me,
+the current maintainer.  Consider using Email::Simple or Email::MIME
+directly.
 
 This module is a generic interface to dealing with RFC2822 compliant
 messages. Email is the most common example of messages in this format,
@@ -72,14 +71,3 @@ L<Email::Simple::Creator>,
 L<Email::Simple::Headers>,
 L<perl>.
 
-=head1 AUTHOR
-
-Casey West, <F<casey@geeknest.com>>.
-
-=head1 COPYRIGHT
-
-  Copyright (c) 2004 Casey West.  All rights reserved.
-  This module is free software; you can redistribute it and/or modify it
-  under the same terms as Perl itself.
-
-=cut
